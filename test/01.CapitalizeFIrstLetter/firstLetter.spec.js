@@ -6,7 +6,7 @@ describe('capitalizeFirstLetter', () => {
   });
 
   test('Empty arg', () => {
-    expect(capitalizeFirstLetter('')).toBe('');
+    expect(capitalizeFirstLetter('')).toBe(null);
   });
 
   test('Number arg', () => {
@@ -14,10 +14,10 @@ describe('capitalizeFirstLetter', () => {
   });
 
   test('Object arg', () => {
-    expect(() => capitalizeFirstLetter({})).toThrow('Input must be a string');
+    expect(capitalizeFirstLetter({})).toBe(null);
   });
 
   test('Array arg', () => {
-    expect(() => capitalizeFirstLetter([])).toThrow('Input must be a string');
+    expect(capitalizeFirstLetter([])).toBe(null);
   });
 });
